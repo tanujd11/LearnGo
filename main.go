@@ -1,11 +1,9 @@
-package main
+package greetings
 
-import (
-	"fmt"
+import "fmt"
 
-	"rsc.io/quote"
-)
-
-func main() {
-	fmt.Println(quote.Glass())
+// Hello returns a greeting for the named person.
+func Hello(name string) string {
+	message := fmt.Sprintf("Hi, %v. Welcome!", name)
+	return message
 }
