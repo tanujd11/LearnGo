@@ -4,8 +4,16 @@ import (
 	"fmt"
 
 	greetings "github.com/tanujd11/LearnGo"
+
+	"log"
 )
 
 func main() {
-	fmt.Println(greetings.Hello("Tanuj"))
+	message, error := greetings.Hello("")
+
+	if error == nil {
+		fmt.Println(message)
+	} else {
+		log.Fatal(error)
+	}
 }
